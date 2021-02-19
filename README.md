@@ -1,10 +1,20 @@
-# This example illustrates issues with passing env-variables to NextJS
+# NextJS handling of env variables
+
+### DISCLAIMER:
+### THIS IS A FRUSTRATION REPOSITORY. If you know a way to get this to work properly, or have a workaround. Please make a PR and prove me wrong.
 
 
+## Background
 
-Ideally there should be a way to pass env-variables post-build.
+Ideally there should be a way to pass env-variables to a container in runtime, allowing you to
+build images free of secrets and then setting these in the live/dev/whatever environment.
+
+NextJS bundles env-vars, which leaves the builds with practically zero portability, making it very hard not to store secrets and variables within the repositories.
+
+Below is my conclusion about all the 4 (!!) ways of passing env-variables, but what in NextJS case becomes practically build-args.
 
 
+## Reproducing the issues:
 
 1. Run dev locally. All env variables are set where they are supposed to, picked up from `.env.local`
 ```
