@@ -29,8 +29,6 @@ export default function Home(props) {
   )
 }
 
-export const getInitialProps= () => {
-  return {
-    props: {works: true}
-  }
+Home.getInitialProps= () => {
+  return {works: true}
 }
