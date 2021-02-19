@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+nav a {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background: black;
+  color: white; 
+  display: inline-block;
+  font-weight: 700;
+}

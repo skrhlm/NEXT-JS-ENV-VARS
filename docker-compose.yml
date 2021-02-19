@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  next:
+    build:
+      target: node
+      context: .
+    command: ['npm', 'run', 'dev']
+    working_dir: /code
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/code
+      - /node_modules
+    environment:
+      - NEXT_PUBLIC_EXAMPLE=Hejhej
+      - EXAMPLE=Hallå

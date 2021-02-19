@@ -4,7 +4,9 @@ import getConfig from 'next/config'
 
 const {publicRuntimeConfig, serverRuntimeConfig} = getConfig()
 
-export default function Home() {
+export default function Home(props) {
+
+  console.log("from getStaticProps", props)
 
   const s = `
   public process:       ${process.env.NEXT_PUBLIC_EXAMPLE || undefined}\n
@@ -14,17 +16,22 @@ export default function Home() {
   `
 
 
-  console.log(s);
 
   return (
     <div className={styles.container}>
-     <h2>This page is static.</h2>
+     <h2>This page uses getStaticProps.</h2>
      <code>
-     <pre>
-      {s}
+       <pre>
+        {s}
       </pre>
      </code>
     </div>
   )
 }
 
+
+export const getStaticProps = async ({ params }) => {
+  return {props: {
+    works: true
+  }}
+}
