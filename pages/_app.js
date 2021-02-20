@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps, ...rest }) {
   <nav>
     <Link href="/">static</Link>
     <Link href="/initial-props">getInitialProps</Link>
-    <Link href="/server-side-props">serverSideProps</Link>
-    <Link href="/static-props">geatStaticProps</Link>
+    <Link href="/server-side-props">getServerSideProps</Link>
+    <Link href="/static-props">getStaticProps</Link>
   </nav>
   <main>
   <Component {...pageProps} {...rest}/>
