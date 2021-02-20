@@ -4,7 +4,10 @@ import getConfig from 'next/config'
 
 const {publicRuntimeConfig, serverRuntimeConfig} = getConfig()
 
-export default function Home() {
+export default function Home(props) {
+
+  console.log("props: ", props)
+
 
   const s = `
   public process:       ${process.env.NEXT_PUBLIC_EXAMPLE || undefined}\n

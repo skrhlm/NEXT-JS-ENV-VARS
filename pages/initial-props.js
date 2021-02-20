@@ -30,5 +30,5 @@ export default function Home(props) {
 }
 
 Home.getInitialProps= () => {
-  return {works: true}
+  return {initialProps: true}
 }

@@ -30,8 +30,8 @@ export default function Home(props) {
 }
 
 
-export const getStaticProps = () => {
+export const getServerSideProps = () => {
   return {props: {
-    works: true
+    serverSideProps: true
   }}
 }
