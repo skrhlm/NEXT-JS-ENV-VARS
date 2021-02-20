@@ -30,7 +30,7 @@ docker-compose up -d
 ```
 make build
 // omit the [hash] below with the hash of the built image from the make command.
-docker run -it -e "NEXT_PUBLIC_EXAMPLE=TEST" -e "EXAMPLE=TEST" -p 3000:3000 [hash] npm start
+docker run -it -e "NEXT_PUBLIC_EXAMPLE=DockerRuntime" -e "EXAMPLE=DockerRuntime" -p 3000:3000 [hash] npm start
 ```
 
 4. Build, but this time we supply the env-variables through make, during the build. The env-variables work as intended.
@@ -42,7 +42,7 @@ docker run -it -p 3000:3000 [hash] npm start
 5. Reuse the logic from 4, but try to override the variables., Does not work.
 ```
 make build-with-vars
-docker run -it -e "NEXT_PUBLIC_EXAMPLE=TEST" -e "EXAMPLE=TEST" -p 3000:3000 [hash] npm start
+docker run -it -e "NEXT_PUBLIC_EXAMPLE=DockerRuntime" -e "EXAMPLE=DockerRuntime" -p 3000:3000 [hash] npm start
 ```
 
 

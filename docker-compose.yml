@@ -13,5 +13,5 @@ services:
       - .:/code
       - /node_modules
     environment:
-      - NEXT_PUBLIC_EXAMPLE=Hejhej
-      - EXAMPLE=Hallå
+      - NEXT_PUBLIC_EXAMPLE=HelloFromCompose
+      - EXAMPLE=HelloFromCompose
